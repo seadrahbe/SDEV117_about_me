@@ -1,0 +1,91 @@
+/* 
+Author: Seadrah Berger
+Date: 4/10/2025
+File Name: style.css
+
+This CSS styles my about me page. It lays out items in a grid and uses colors such as
+red, white and pink to create contrast, alongside 3 different fonts. */
+
+html {
+  background-color: rgb(243, 206, 206);
+}
+
+body {
+  display: grid;
+  border-left: 1px solid #5c0410;
+  border-right: 1px solid #5c0410;
+  width: 650px;
+  margin: auto;
+  font-family: Lexend Deca;
+  padding: 40px 80px;
+  background-color: #f0e6e6;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "head head head head"
+    "int int int int"
+    "goal goal fav fav"
+    "en en en en";
+}
+
+.interests {
+  grid-area: int;
+}
+
+.goals {
+  grid-area: goal;
+}
+
+.favorites {
+  grid-area: fav;
+}
+
+header {
+  max-width: 650px;
+  display: grid;
+  grid-area: head;
+  grid-template-columns: auto 0.5fr;
+  grid-column-gap: 70px;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    "ab ab"
+    "intro img";
+}
+
+.end-photo {
+  grid-area: en;
+  border: 1px solid #5c0410;
+  margin: auto;
+  margin-top: 40px;
+}
+
+header h1 {
+  grid-area: ab;
+  margin: auto;
+  font-family: Rubik Marker Hatch;
+  text-align: center;
+  font-weight: 200;
+  font-size: 3em;
+  color: #3a020a;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+h2,
+h3 {
+  font-family: Miltonian;
+  text-decoration: underline;
+  color: #3a020a;
+  font-size: 1.3em;
+}
+
+.profile {
+  grid-area: img;
+  align-self: center;
+  border: 1px solid #5c0410;
+}
+
+.intro {
+  grid-area: intro;
+}
